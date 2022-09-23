@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "DV6V58n4k"
@@ -24,16 +24,6 @@
             "type": "dashboard"
           },
           "type": "dashboard"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "jDAHOL7Vz"
-          },
-          "enable": true,
-          "expr": "grafana_alerting_active_alerts{}",
-          "iconColor": "red",
-          "name": "my-anno"
         }
       ]
     },
@@ -43,97 +33,6 @@
     "links": [],
     "liveNow": false,
     "panels": [
-      {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "jDAHOL7Vz"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "custom": {
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "scaleDistribution": {
-                "type": "linear"
-              }
-            },
-            "links": [
-              {
-                "targetBlank": true,
-                "title": "wwww",
-                "url": "http://ismail.com"
-              }
-            ]
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 17,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 1,
-        "options": {
-          "calculate": false,
-          "cellGap": 1,
-          "cellValues": {
-            "unit": "short"
-          },
-          "color": {
-            "exponent": 0.6,
-            "fill": "dark-orange",
-            "mode": "scheme",
-            "reverse": false,
-            "scale": "exponential",
-            "scheme": "Oranges",
-            "steps": 64
-          },
-          "exemplars": {
-            "color": "rgba(255,0,255,0.7)"
-          },
-          "filterValues": {
-            "le": 1e-9
-          },
-          "legend": {
-            "show": true
-          },
-          "rowsFrame": {
-            "layout": "auto"
-          },
-          "tooltip": {
-            "show": true,
-            "yHistogram": false
-          },
-          "yAxis": {
-            "axisPlacement": "left",
-            "reverse": false
-          }
-        },
-        "pluginVersion": "9.5.0-pre",
-        "targets": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "jDAHOL7Vz"
-            },
-            "editorMode": "code",
-            "exemplar": true,
-            "expr": "histogram_quantile(0.95, sum by(le, job) (rate(tns_request_duration_seconds_bucket[$__rate_interval])))",
-            "format": "time_series",
-            "instant": false,
-            "key": "Q-9dc24ba5-e0cd-42c4-a4c6-dbf25495ce04-0",
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "A"
-          }
-        ],
-        "title": "heatmap with labels",
-        "type": "heatmap"
-      },
       {
         "datasource": {
           "type": "prometheus",
@@ -192,12 +91,12 @@
           "overrides": []
         },
         "gridPos": {
-          "h": 16,
-          "w": 24,
+          "h": 8,
+          "w": 12,
           "x": 0,
-          "y": 17
+          "y": 0
         },
-        "id": 5,
+        "id": 1,
         "options": {
           "legend": {
             "calcs": [],
@@ -218,26 +117,26 @@
             },
             "editorMode": "code",
             "exemplar": true,
-            "expr": "histogram_quantile(0.95, sum(rate(tns_request_duration_seconds_bucket[$__rate_interval])) by (le))",
+            "expr": "histogram_quantile(.99, sum(rate(tns_request_duration_seconds_bucket{}[1m])) by (le))",
+            "instant": true,
+            "key": "Q-9dc24ba5-e0cd-42c4-a4c6-dbf25495ce04-0",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
           }
         ],
-        "title": "Panel Title",
+        "title": "tns_request_duration_seconds_bucket with exemplars",
         "type": "timeseries"
       }
     ],
-    "refresh": "",
-    "revision": 1,
-    "schemaVersion": 41,
+    "schemaVersion": 37,
     "style": "dark",
     "tags": [],
     "templating": {
       "list": []
     },
     "time": {
-      "from": "now-5m",
+      "from": "now-6h",
       "to": "now"
     },
     "timepicker": {},
