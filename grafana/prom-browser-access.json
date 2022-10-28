@@ -31,7 +31,7 @@
             "uid": "3uIlEm7Vz"
           },
           "enable": true,
-          "expr": "sum by(status_code) (rate(grafana_http_request_duration_seconds_count{handler=\"/api/annotations\"}[30s])) \u003e 0.01",
+          "expr": "sum by(status_code) (grafana_http_request_duration_seconds_count{handler=\"/api/annotations\"}) \u003e 20",
           "iconColor": "red",
           "name": "Test Annotation",
           "step": ""
@@ -127,7 +127,7 @@
               "uid": "3uIlEm7Vz"
             },
             "editorMode": "code",
-            "expr": "sum by(status_code) (rate(grafana_http_request_duration_seconds_count{handler=\"/api/annotations\"}[30s]))",
+            "expr": "sum by(status_code) (grafana_http_request_duration_seconds_count{handler=\"/api/annotations\"})",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
