@@ -24,6 +24,17 @@
             "type": "dashboard"
           },
           "type": "dashboard"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "3uIlEm7Vz"
+          },
+          "enable": true,
+          "expr": "node_cpu_seconds_total",
+          "iconColor": "red",
+          "name": "New annotation",
+          "step": "2"
         }
       ]
     },
@@ -92,7 +103,7 @@
         },
         "gridPos": {
           "h": 9,
-          "w": 12,
+          "w": 24,
           "x": 0,
           "y": 0
         },
@@ -116,7 +127,7 @@
               "uid": "3uIlEm7Vz"
             },
             "editorMode": "code",
-            "expr": "",
+            "expr": "rate(node_cpu_seconds_total[$__rate_interval])",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
