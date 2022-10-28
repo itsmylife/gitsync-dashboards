@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "vClSubN4z"
@@ -24,17 +24,6 @@
             "type": "dashboard"
           },
           "type": "dashboard"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "3uIlEm7Vz"
-          },
-          "enable": true,
-          "expr": "sum by(status_code) (grafana_http_request_duration_seconds_count{handler=\"/api/annotations\"}) \u003e 20",
-          "iconColor": "red",
-          "name": "Test Annotation",
-          "step": ""
         }
       ]
     },
@@ -103,7 +92,7 @@
         },
         "gridPos": {
           "h": 9,
-          "w": 24,
+          "w": 12,
           "x": 0,
           "y": 0
         },
@@ -127,7 +116,7 @@
               "uid": "3uIlEm7Vz"
             },
             "editorMode": "code",
-            "expr": "sum by(status_code) (grafana_http_request_duration_seconds_count{handler=\"/api/annotations\"})",
+            "expr": "",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
@@ -137,15 +126,14 @@
         "type": "timeseries"
       }
     ],
-    "refresh": "",
-    "schemaVersion": 41,
+    "schemaVersion": 37,
     "style": "dark",
     "tags": [],
     "templating": {
       "list": []
     },
     "time": {
-      "from": "now-1h",
+      "from": "now-6h",
       "to": "now"
     },
     "timepicker": {},
