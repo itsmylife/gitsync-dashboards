@@ -31,7 +31,7 @@
             "uid": "3uIlEm7Vz"
           },
           "enable": true,
-          "expr": "go_memstats_alloc_bytes{instance=\"host.docker.internal:3000\"}",
+          "expr": "node_cpu_seconds_total",
           "iconColor": "red",
           "name": "Test Annotation",
           "step": ""
