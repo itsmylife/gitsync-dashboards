@@ -33,8 +33,8 @@
           "enable": true,
           "expr": "node_cpu_seconds_total",
           "iconColor": "red",
-          "name": "New annotation",
-          "step": "2"
+          "name": "Test Annotation",
+          "step": "0.8"
         }
       ]
     },
@@ -144,7 +144,7 @@
       "list": []
     },
     "time": {
-      "from": "now-6h",
+      "from": "now-15m",
       "to": "now"
     },
     "timepicker": {},
