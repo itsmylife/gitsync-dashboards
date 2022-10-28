@@ -34,7 +34,7 @@
           "expr": "node_cpu_seconds_total",
           "iconColor": "red",
           "name": "Test Annotation",
-          "step": "0.8"
+          "step": ""
         }
       ]
     },
