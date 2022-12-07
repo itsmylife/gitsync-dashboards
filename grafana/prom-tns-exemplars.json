@@ -40,52 +40,15 @@
         },
         "fieldConfig": {
           "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
             "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
               "hideFrom": {
                 "legend": false,
                 "tooltip": false,
                 "viz": false
               },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
               "scaleDistribution": {
                 "type": "linear"
-              },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
               }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
             }
           },
           "overrides": []
@@ -98,17 +61,39 @@
         },
         "id": 1,
         "options": {
+          "calculate": false,
+          "cellGap": 1,
+          "color": {
+            "exponent": 0.5,
+            "fill": "dark-orange",
+            "mode": "scheme",
+            "reverse": false,
+            "scale": "exponential",
+            "scheme": "Oranges",
+            "steps": 64
+          },
+          "exemplars": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "filterValues": {
+            "le": 1e-9
+          },
           "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
+            "show": true
+          },
+          "rowsFrame": {
+            "layout": "auto"
           },
           "tooltip": {
-            "mode": "single",
-            "sort": "none"
+            "show": true,
+            "yHistogram": false
+          },
+          "yAxis": {
+            "axisPlacement": "left",
+            "reverse": false
           }
         },
+        "pluginVersion": "9.4.0-pre",
         "targets": [
           {
             "datasource": {
@@ -117,7 +102,8 @@
             },
             "editorMode": "code",
             "exemplar": true,
-            "expr": "histogram_quantile(.99, sum(rate(tns_request_duration_seconds_bucket{}[1m])) by (le))",
+            "expr": "rate(tns_request_duration_seconds_bucket[$__rate_interval])",
+            "format": "heatmap",
             "instant": true,
             "key": "Q-9dc24ba5-e0cd-42c4-a4c6-dbf25495ce04-0",
             "legendFormat": "__auto",
@@ -126,7 +112,7 @@
           }
         ],
         "title": "tns_request_duration_seconds_bucket with exemplars",
-        "type": "timeseries"
+        "type": "heatmap"
       }
     ],
     "schemaVersion": 37,
@@ -136,7 +122,7 @@
       "list": []
     },
     "time": {
-      "from": "now-6h",
+      "from": "now-30m",
       "to": "now"
     },
     "timepicker": {},
