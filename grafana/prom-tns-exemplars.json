@@ -121,7 +121,7 @@
             "refId": "A"
           }
         ],
-        "title": "tns_request_duration_seconds_bucket with exemplars",
+        "title": "heatmap with labels",
         "type": "heatmap"
       },
       {
