@@ -112,9 +112,9 @@
             },
             "editorMode": "code",
             "exemplar": true,
-            "expr": "rate(tns_request_duration_seconds_bucket[$__rate_interval])",
+            "expr": "histogram_quantile(0.95, sum by(le, job) (rate(tns_request_duration_seconds_bucket[$__rate_interval])))",
             "format": "heatmap",
-            "instant": true,
+            "instant": false,
             "key": "Q-9dc24ba5-e0cd-42c4-a4c6-dbf25495ce04-0",
             "legendFormat": "__auto",
             "range": true,
@@ -260,8 +260,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -349,8 +348,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -424,8 +422,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -499,8 +496,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
