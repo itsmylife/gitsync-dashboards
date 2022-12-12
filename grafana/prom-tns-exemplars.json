@@ -218,6 +218,7 @@
         "type": "timeseries"
       }
     ],
+    "refresh": false,
     "schemaVersion": 37,
     "style": "dark",
     "tags": [],
@@ -225,8 +226,8 @@
       "list": []
     },
     "time": {
-      "from": "now-15m",
-      "to": "now"
+      "from": "2022-12-12T17:00:00.000Z",
+      "to": "2022-12-12T17:30:00.000Z"
     },
     "timepicker": {},
     "timezone": "",
