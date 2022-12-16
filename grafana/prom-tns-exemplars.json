@@ -226,8 +226,8 @@
       "list": []
     },
     "time": {
-      "from": "2022-12-12T17:00:00.000Z",
-      "to": "2022-12-12T17:30:00.000Z"
+      "from": "now-5m",
+      "to": "now"
     },
     "timepicker": {},
     "timezone": "",
