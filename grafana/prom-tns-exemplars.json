@@ -28,12 +28,12 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "jDAHOL7Vz"
+            "uid": "${datasource}"
           },
           "enable": true,
           "expr": "grafana_alerting_active_alerts{}",
           "iconColor": "red",
-          "name": "New annotation"
+          "name": "my-anno"
         }
       ]
     },
