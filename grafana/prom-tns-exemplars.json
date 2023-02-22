@@ -28,7 +28,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${datasource}"
+            "uid": "jDAHOL7Vz"
           },
           "enable": true,
           "expr": "grafana_alerting_active_alerts{}",
@@ -234,25 +234,7 @@
     "style": "dark",
     "tags": [],
     "templating": {
-      "list": [
-        {
-          "current": {
-            "selected": false,
-            "text": "gdev-prometheus",
-            "value": "gdev-prometheus"
-          },
-          "hide": 0,
-          "includeAll": false,
-          "multi": false,
-          "name": "datasource",
-          "options": [],
-          "query": "prometheus",
-          "refresh": 1,
-          "regex": "",
-          "skipUrlSync": false,
-          "type": "datasource"
-        }
-      ]
+      "list": []
     },
     "time": {
       "from": "now-5m",
