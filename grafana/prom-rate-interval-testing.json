@@ -118,6 +118,7 @@
           "y": 0
         },
         "id": 3,
+        "interval": "30s",
         "options": {
           "legend": {
             "calcs": [],
@@ -139,7 +140,7 @@
             "editorMode": "code",
             "expr": "sum(rate(process_cpu_seconds_total[$__interval])) * sum(rate(grafana_live_node_action_count[$__rate_interval]))",
             "instant": false,
-            "interval": "$__interval",
+            "interval": "$__rate_interval",
             "legendFormat": "__auto",
             "range": true,
             "refId": "G"
