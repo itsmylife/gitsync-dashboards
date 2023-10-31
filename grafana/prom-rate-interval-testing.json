@@ -138,9 +138,9 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "sum(rate(process_cpu_seconds_total[$__interval])) * sum(rate(grafana_live_node_action_count[$__rate_interval]))",
+            "expr": "rate(rpc_durations_seconds_count[$__rate_interval])",
             "instant": false,
-            "interval": "$__rate_interval",
+            "interval": "",
             "legendFormat": "__auto",
             "range": true,
             "refId": "G"
