@@ -118,7 +118,6 @@
           "y": 0
         },
         "id": 3,
-        "interval": "5m",
         "options": {
           "legend": {
             "calcs": [],
