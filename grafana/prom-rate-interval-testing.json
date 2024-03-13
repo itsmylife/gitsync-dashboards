@@ -29,8 +29,8 @@
     "panels": [
       {
         "datasource": {
-          "type": "prometheus",
-          "uid": "zxS5e5W4k"
+          "type": "datasource",
+          "uid": "-- Mixed --"
         },
         "fieldConfig": {
           "defaults": {
@@ -106,6 +106,32 @@
             "sort": "none"
           }
         },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "zxS5e5W4k"
+            },
+            "editorMode": "code",
+            "expr": "process_cpu_seconds_total",
+            "instant": false,
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "gdev-prometheus"
+            },
+            "editorMode": "code",
+            "expr": "process_cpu_seconds_total",
+            "hide": false,
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "B"
+          }
+        ],
         "title": "Mixed datasource interval test",
         "type": "timeseries"
       },
