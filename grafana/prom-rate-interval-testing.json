@@ -29,8 +29,8 @@
     "panels": [
       {
         "datasource": {
-          "type": "datasource",
-          "uid": "-- Mixed --"
+          "type": "prometheus",
+          "uid": "zxS5e5W4k"
         },
         "fieldConfig": {
           "defaults": {
@@ -113,23 +113,11 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "process_cpu_seconds_total",
+            "expr": "rate(process_cpu_seconds_total[$__interval])",
             "instant": false,
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "gdev-prometheus"
-            },
-            "editorMode": "code",
-            "expr": "process_cpu_seconds_total",
-            "hide": false,
-            "legendFormat": "__auto",
-            "range": true,
-            "refId": "B"
           }
         ],
         "title": "Mixed datasource interval test",
