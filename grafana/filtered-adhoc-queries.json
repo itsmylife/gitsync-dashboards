@@ -104,6 +104,7 @@
             "sort": "none"
           }
         },
+        "pluginVersion": "11.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -227,6 +228,7 @@
             "sort": "none"
           }
         },
+        "pluginVersion": "11.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -322,6 +324,7 @@
             "sort": "none"
           }
         },
+        "pluginVersion": "11.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -417,6 +420,7 @@
             "sort": "none"
           }
         },
+        "pluginVersion": "11.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -440,6 +444,7 @@
     "templating": {
       "list": [
         {
+          "baseFilters": [],
           "datasource": {
             "type": "prometheus",
             "uid": "zxS5e5W4k"
@@ -451,12 +456,11 @@
               "value": "grafana"
             }
           ],
-          "hide": 0,
           "name": "adhoc",
-          "skipUrlSync": false,
           "type": "adhoc"
         },
         {
+          "baseFilters": [],
           "datasource": {
             "type": "influxdb",
             "uid": "vA4bkHenk"
@@ -468,9 +472,7 @@
               "value": "bf25eb1ee27f"
             }
           ],
-          "hide": 0,
           "name": "adhoc_influx",
-          "skipUrlSync": false,
           "type": "adhoc"
         }
       ]
@@ -479,7 +481,6 @@
       "from": "now-30m",
       "to": "now"
     },
-    "timeRangeUpdatedDuringEditOrView": false,
     "timepicker": {},
     "timezone": "browser",
     "title": "filtered adhoc queries",
