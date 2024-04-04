@@ -461,7 +461,13 @@
             "type": "influxdb",
             "uid": "vA4bkHenk"
           },
-          "filters": [],
+          "filters": [
+            {
+              "key": "host",
+              "operator": "=",
+              "value": "bf25eb1ee27f"
+            }
+          ],
           "hide": 0,
           "name": "adhoc_influx",
           "skipUrlSync": false,
