@@ -131,7 +131,13 @@
             "type": "prometheus",
             "uid": "zxS5e5W4k"
           },
-          "filters": [],
+          "filters": [
+            {
+              "key": "instance",
+              "operator": "=",
+              "value": "fake-prometheus-data:9091"
+            }
+          ],
           "hide": 0,
           "name": "adhoc",
           "skipUrlSync": false,
