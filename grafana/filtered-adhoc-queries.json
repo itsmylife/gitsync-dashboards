@@ -146,7 +146,7 @@
             "tags": []
           }
         ],
-        "title": "Panel Title",
+        "title": "influx cpu usage_idle",
         "type": "timeseries"
       },
       {
