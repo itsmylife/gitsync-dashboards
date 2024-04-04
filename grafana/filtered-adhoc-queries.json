@@ -87,7 +87,7 @@
         },
         "gridPos": {
           "h": 8,
-          "w": 12,
+          "w": 24,
           "x": 0,
           "y": 0
         },
@@ -182,7 +182,7 @@
         },
         "gridPos": {
           "h": 8,
-          "w": 12,
+          "w": 24,
           "x": 0,
           "y": 8
         },
@@ -277,7 +277,7 @@
         },
         "gridPos": {
           "h": 8,
-          "w": 12,
+          "w": 24,
           "x": 0,
           "y": 16
         },
@@ -321,7 +321,13 @@
             "type": "prometheus",
             "uid": "zxS5e5W4k"
           },
-          "filters": [],
+          "filters": [
+            {
+              "key": "job",
+              "operator": "=",
+              "value": "grafana"
+            }
+          ],
           "hide": 0,
           "name": "adhoc",
           "skipUrlSync": false,
