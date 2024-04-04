@@ -332,6 +332,17 @@
           "name": "adhoc",
           "skipUrlSync": false,
           "type": "adhoc"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "vA4bkHenk"
+          },
+          "filters": [],
+          "hide": 0,
+          "name": "adhoc_influx",
+          "skipUrlSync": false,
+          "type": "adhoc"
         }
       ]
     },
