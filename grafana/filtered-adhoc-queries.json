@@ -238,22 +238,6 @@
           ],
           "name": "adhoc",
           "type": "adhoc"
-        },
-        {
-          "baseFilters": [],
-          "datasource": {
-            "type": "influxdb",
-            "uid": "vA4bkHenk"
-          },
-          "filters": [
-            {
-              "key": "host",
-              "operator": "=",
-              "value": "bf25eb1ee27f"
-            }
-          ],
-          "name": "adhoc_influx",
-          "type": "adhoc"
         }
       ]
     },
