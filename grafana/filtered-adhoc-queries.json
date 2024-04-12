@@ -28,8 +28,8 @@
     "panels": [
       {
         "datasource": {
-          "type": "influxdb",
-          "uid": "vA4bkHenk"
+          "type": "prometheus",
+          "uid": "zxS5e5W4k"
         },
         "fieldConfig": {
           "defaults": {
@@ -104,47 +104,19 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "11.1.0-pre",
+        "pluginVersion": "9.2.0",
         "targets": [
           {
             "datasource": {
-              "type": "influxdb",
-              "uid": "vA4bkHenk"
+              "type": "prometheus",
+              "uid": "zxS5e5W4k"
             },
-            "groupBy": [
-              {
-                "params": [
-                  "$__interval"
-                ],
-                "type": "time"
-              },
-              {
-                "params": [
-                  "null"
-                ],
-                "type": "fill"
-              }
-            ],
-            "measurement": "cpu",
-            "orderByTime": "ASC",
-            "policy": "default",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "select": [
-              [
-                {
-                  "params": [
-                    "usage_idle"
-                  ],
-                  "type": "field"
-                },
-                {
-                  "params": [],
-                  "type": "mean"
-                }
-              ]
-            ],
-            "tags": []
+            "editorMode": "code",
+            "expr": "process_cpu_seconds_total",
+            "instant": false,
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
           }
         ],
         "title": "Panel Title",
@@ -213,7 +185,7 @@
           "h": 8,
           "w": 24,
           "x": 0,
-          "y": 0
+          "y": 8
         },
         "id": 2,
         "options": {
@@ -228,7 +200,7 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "11.1.0-pre",
+        "pluginVersion": "9.2.0",
         "targets": [
           {
             "datasource": {
@@ -309,7 +281,7 @@
           "h": 8,
           "w": 24,
           "x": 0,
-          "y": 8
+          "y": 16
         },
         "id": 1,
         "options": {
@@ -324,7 +296,7 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "11.1.0-pre",
+        "pluginVersion": "9.2.0",
         "targets": [
           {
             "datasource": {
@@ -364,6 +336,7 @@
           "type": "adhoc"
         },
         {
+          "baseFilters": [],
           "datasource": {
             "type": "influxdb",
             "uid": "vA4bkHenk"
