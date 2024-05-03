@@ -113,7 +113,7 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "rate(process_cpu_seconds_total[$__interval])",
+            "expr": "rate(process_cpu_seconds_total[$__rate_interval_s])",
             "instant": false,
             "legendFormat": "__auto",
             "range": true,
