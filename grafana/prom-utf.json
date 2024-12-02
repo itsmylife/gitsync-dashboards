@@ -81,6 +81,10 @@
     "templating": {
       "list": []
     },
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
     "timepicker": {},
     "timezone": "browser",
     "title": "prom utf",
