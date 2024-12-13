@@ -133,20 +133,20 @@
       "list": [
         {
           "current": {
-            "text": "\"label with space\"",
-            "value": "\"label with space\""
+            "text": "a_legacy_label",
+            "value": "a_legacy_label"
           },
           "datasource": {
             "apiVersion": "v0alpha1",
             "type": "prometheus",
             "uid": "zxS5e5W4k"
           },
-          "definition": "label_names(utf8)",
+          "definition": "label_names(a.utf8.metric)",
           "name": "utf8_metric_labels",
           "options": [],
           "query": {
             "qryType": 0,
-            "query": "label_names(utf8)",
+            "query": "label_names(a.utf8.metric)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,
@@ -221,8 +221,8 @@
         },
         {
           "current": {
-            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"} 957 1734105357000",
-            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"} 957 1734105357000"
+            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"} 1032 1734105737000",
+            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"} 1032 1734105737000"
           },
           "datasource": {
             "apiVersion": "v0alpha1",
