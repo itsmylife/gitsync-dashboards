@@ -218,6 +218,67 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
+        },
+        {
+          "current": {
+            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"} 957 1734105357000",
+            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"} 957 1734105357000"
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "definition": "query_result({\"a.utf8.metric 🤘\"})",
+          "name": "query_result_with_utf8",
+          "options": [],
+          "query": {
+            "qryType": 3,
+            "query": "query_result({\"a.utf8.metric 🤘\"})",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "a.utf8.metric 🤘",
+            "value": "a.utf8.metric 🤘"
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "definition": "metrics(utf)",
+          "name": "metrics_with_utf8",
+          "options": [],
+          "query": {
+            "qryType": 2,
+            "query": "metrics(utf)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "name": "query0",
+          "options": [],
+          "query": "",
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
         }
       ]
     },
