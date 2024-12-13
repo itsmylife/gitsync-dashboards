@@ -262,23 +262,6 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
-        },
-        {
-          "current": {
-            "text": "",
-            "value": ""
-          },
-          "datasource": {
-            "apiVersion": "v0alpha1",
-            "type": "prometheus",
-            "uid": "zxS5e5W4k"
-          },
-          "name": "query0",
-          "options": [],
-          "query": "",
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
         }
       ]
     },
