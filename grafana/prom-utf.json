@@ -115,7 +115,7 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "{\"a.utf8.metric 🤘\", }",
+            "expr": "{\"${metrics_with_utf8}\", $utf8_metric_labels=~\".+\"}",
             "instant": true,
             "legendFormat": "__auto",
             "range": true,
