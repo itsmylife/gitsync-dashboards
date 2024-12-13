@@ -106,7 +106,7 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "11.4.0-pre",
+        "pluginVersion": "11.5.0-pre",
         "targets": [
           {
             "datasource": {
@@ -115,7 +115,7 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "{\"a.utf8.metric 🤘\"}",
+            "expr": "{\"a.utf8.metric 🤘\", }",
             "instant": true,
             "legendFormat": "__auto",
             "range": true,
@@ -133,8 +133,8 @@
       "list": [
         {
           "current": {
-            "text": "instance",
-            "value": "instance"
+            "text": "\"label with space\"",
+            "value": "\"label with space\""
           },
           "datasource": {
             "apiVersion": "v0alpha1",
@@ -142,11 +142,33 @@
             "uid": "zxS5e5W4k"
           },
           "definition": "label_names(utf8)",
-          "name": "utf8_labels",
+          "name": "utf8_metric_labels",
           "options": [],
           "query": {
             "qryType": 0,
             "query": "label_names(utf8)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "definition": "label_values(a.utf8.metric 🤘,\"label with space\")",
+          "name": "utf8_label_val",
+          "options": [],
+          "query": {
+            "qryType": 1,
+            "query": "label_values(a.utf8.metric 🤘,\"label with space\")",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,
