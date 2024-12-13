@@ -116,10 +116,24 @@
             },
             "editorMode": "code",
             "expr": "{\"${metrics_with_utf8}\", $utf8_metric_labels=~\".+\"}",
+            "hide": true,
             "instant": true,
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "zxS5e5W4k"
+            },
+            "editorMode": "code",
+            "expr": "a_utf8_http_requests_total{$utf8_metric_labels=\"legacy\"}",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "B"
           }
         ],
         "title": "New Panel",
