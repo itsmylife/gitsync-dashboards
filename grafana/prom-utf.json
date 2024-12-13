@@ -174,6 +174,50 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
+        },
+        {
+          "current": {
+            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"}",
+            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"}"
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "definition": "{\"a.utf8.metric 🤘\"}",
+          "name": "classic_query_with_utf8",
+          "options": [],
+          "query": {
+            "qryType": 5,
+            "query": "{\"a.utf8.metric 🤘\"}",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"}",
+            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\"}"
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "definition": "{\"a.utf8.metric 🤘\"}",
+          "name": "series_query_with_utf8",
+          "options": [],
+          "query": {
+            "qryType": 4,
+            "query": "{\"a.utf8.metric 🤘\"}",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
         }
       ]
     },
