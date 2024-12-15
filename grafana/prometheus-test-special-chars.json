@@ -643,6 +643,28 @@
           "filters": [],
           "name": "adhoc",
           "type": "adhoc"
+        },
+        {
+          "current": {
+            "text": "back\\slash",
+            "value": "back\\slash"
+          },
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "be6z2f64dhnuob"
+          },
+          "definition": "label_values(test_backslash,label)",
+          "name": "multi_val_backslash",
+          "options": [],
+          "query": {
+            "qryType": 1,
+            "query": "label_values(test_backslash,label)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
         }
       ]
     },
