@@ -745,8 +745,14 @@
         },
         {
           "current": {
-            "text": "back\\slash",
-            "value": "back\\slash"
+            "text": [
+              "back\\slash",
+              "double\\\\slash"
+            ],
+            "value": [
+              "back\\slash",
+              "double\\\\slash"
+            ]
           },
           "datasource": {
             "apiVersion": "v0alpha1",
