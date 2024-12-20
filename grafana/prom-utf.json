@@ -153,7 +153,7 @@
           "datasource": {
             "apiVersion": "v0alpha1",
             "type": "prometheus",
-            "uid": "zxS5e5W4k"
+            "uid": "de73no0itauwwe"
           },
           "definition": "label_names(a.utf8.metric)",
           "name": "utf8_metric_labels",
@@ -175,14 +175,14 @@
           "datasource": {
             "apiVersion": "v0alpha1",
             "type": "prometheus",
-            "uid": "zxS5e5W4k"
+            "uid": "de73no0itauwwe"
           },
-          "definition": "label_values(a.utf8.metric 🤘,\"label with space\")",
+          "definition": "label_values({\"a.utf8.metric 🤘\"},label with space)",
           "name": "utf8_label_val",
           "options": [],
           "query": {
             "qryType": 1,
-            "query": "label_values(a.utf8.metric 🤘,\"label with space\")",
+            "query": "label_values({\"a.utf8.metric 🤘\"},label with space)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,
