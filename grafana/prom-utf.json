@@ -168,20 +168,20 @@
         },
         {
           "current": {
-            "text": "legacy",
-            "value": "legacy"
+            "text": "",
+            "value": ""
           },
           "datasource": {
             "apiVersion": "v0alpha1",
             "type": "prometheus",
             "uid": "de73no0itauwwe"
           },
-          "definition": "label_values(instance)",
+          "definition": "label_values({\"a.utf8.metric 🤘\"},a_legacy_label)",
           "name": "utf8_label_val",
           "options": [],
           "query": {
             "qryType": 1,
-            "query": "label_values(instance)",
+            "query": "label_values({\"a.utf8.metric 🤘\"},a_legacy_label)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,
