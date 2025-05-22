@@ -460,18 +460,18 @@
           "description": "1,3,33",
           "hide": 2,
           "name": "custom",
-          "query": "1,3,33",
+          "query": "1",
           "skipUrlSync": true,
           "type": "constant"
         },
         {
           "current": {
-            "text": "1,2,3",
-            "value": "1,2,3"
+            "text": "1",
+            "value": "1"
           },
           "hide": 2,
-          "name": "bottomk",
-          "query": "1,2,3",
+          "name": "topk",
+          "query": "1",
           "skipUrlSync": true,
           "type": "constant"
         },
@@ -514,7 +514,7 @@
               "value": "1"
             }
           ],
-          "query": "1",
+          "query": "",
           "type": "textbox"
         }
       ]
