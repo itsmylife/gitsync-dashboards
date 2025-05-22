@@ -28,6 +28,7 @@
     "panels": [
       {
         "datasource": {
+          "apiVersion": "v0alpha1",
           "type": "prometheus",
           "uid": "zxS5e5W4k"
         },
@@ -43,6 +44,7 @@
               "axisLabel": "",
               "axisPlacement": "auto",
               "barAlignment": 0,
+              "barWidthFactor": 0.6,
               "drawStyle": "line",
               "fillOpacity": 0,
               "gradientMode": "none",
@@ -74,7 +76,106 @@
               "steps": [
                 {
                   "color": "green",
-                  "value": null
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 4,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.1.0-pre",
+        "targets": [
+          {
+            "datasource": {
+              "apiVersion": "v0alpha1",
+              "type": "prometheus",
+              "uid": "zxS5e5W4k"
+            },
+            "editorMode": "code",
+            "expr": "topk($)",
+            "instant": false,
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "New panel",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "zxS5e5W4k"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
                 },
                 {
                   "color": "red",
@@ -100,11 +201,12 @@
             "showLegend": true
           },
           "tooltip": {
+            "hideZeros": false,
             "mode": "single",
             "sort": "none"
           }
         },
-        "pluginVersion": "9.2.0",
+        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -139,6 +241,7 @@
               "axisLabel": "",
               "axisPlacement": "auto",
               "barAlignment": 0,
+              "barWidthFactor": 0.6,
               "drawStyle": "line",
               "fillOpacity": 0,
               "gradientMode": "none",
@@ -170,7 +273,7 @@
               "steps": [
                 {
                   "color": "green",
-                  "value": null
+                  "value": 0
                 },
                 {
                   "color": "red",
@@ -196,11 +299,12 @@
             "showLegend": true
           },
           "tooltip": {
+            "hideZeros": false,
             "mode": "single",
             "sort": "none"
           }
         },
-        "pluginVersion": "9.2.0",
+        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -235,6 +339,7 @@
               "axisLabel": "",
               "axisPlacement": "auto",
               "barAlignment": 0,
+              "barWidthFactor": 0.6,
               "drawStyle": "line",
               "fillOpacity": 0,
               "gradientMode": "none",
@@ -266,7 +371,7 @@
               "steps": [
                 {
                   "color": "green",
-                  "value": null
+                  "value": 0
                 },
                 {
                   "color": "red",
@@ -292,11 +397,12 @@
             "showLegend": true
           },
           "tooltip": {
+            "hideZeros": false,
             "mode": "single",
             "sort": "none"
           }
         },
-        "pluginVersion": "9.2.0",
+        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -315,7 +421,8 @@
         "type": "timeseries"
       }
     ],
-    "schemaVersion": 39,
+    "preload": false,
+    "schemaVersion": 41,
     "tags": [],
     "templating": {
       "list": [
@@ -344,6 +451,71 @@
           "filters": [],
           "name": "adhoc_influx",
           "type": "adhoc"
+        },
+        {
+          "current": {
+            "text": "1,3,33",
+            "value": "1,3,33"
+          },
+          "description": "1,3,33",
+          "hide": 2,
+          "name": "custom",
+          "query": "1,3,33",
+          "skipUrlSync": true,
+          "type": "constant"
+        },
+        {
+          "current": {
+            "text": "1,2,3",
+            "value": "1,2,3"
+          },
+          "hide": 2,
+          "name": "bottomk",
+          "query": "1,2,3",
+          "skipUrlSync": true,
+          "type": "constant"
+        },
+        {
+          "current": {
+            "text": "1",
+            "value": "1"
+          },
+          "name": "ismail",
+          "options": [
+            {
+              "selected": true,
+              "text": "1",
+              "value": "1"
+            },
+            {
+              "selected": false,
+              "text": "2",
+              "value": "2"
+            },
+            {
+              "selected": false,
+              "text": "3",
+              "value": "3"
+            }
+          ],
+          "query": "1,2,3",
+          "type": "custom"
+        },
+        {
+          "current": {
+            "text": "1",
+            "value": "1"
+          },
+          "name": "query0",
+          "options": [
+            {
+              "selected": true,
+              "text": "1",
+              "value": "1"
+            }
+          ],
+          "query": "1",
+          "type": "textbox"
         }
       ]
     },
@@ -353,7 +525,6 @@
     },
     "timepicker": {},
     "timezone": "browser",
-    "title": "filtered adhoc queries",
-    "weekStart": ""
+    "title": "filtered adhoc queries"
   }
 }
