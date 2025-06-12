@@ -112,32 +112,6 @@
         "targets": [
           {
             "datasource": {
-              "apiVersion": "v0alpha1",
-              "type": "prometheus",
-              "uid": "zxS5e5W4k"
-            },
-            "editorMode": "code",
-            "expr": " month() == bool vector(${__to:date:M})",
-            "hide": true,
-            "legendFormat": "query",
-            "range": true,
-            "refId": "A"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "zxS5e5W4k"
-            },
-            "editorMode": "code",
-            "expr": " month()",
-            "hide": false,
-            "instant": false,
-            "legendFormat": "Prom",
-            "range": true,
-            "refId": "Prom month()"
-          },
-          {
-            "datasource": {
               "type": "prometheus",
               "uid": "zxS5e5W4k"
             },
@@ -161,8 +135,8 @@
       "list": []
     },
     "time": {
-      "from": "2025-06-15T02:00:00.000Z",
-      "to": "2025-07-15T01:59:59.000Z"
+      "from": "2025-05-15T02:00:00.000Z",
+      "to": "2025-06-15T01:59:59.000Z"
     },
     "timepicker": {},
     "timezone": "utc",
