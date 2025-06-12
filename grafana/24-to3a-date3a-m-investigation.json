@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "0944e943-0864-4bfa-bc46-3de65e68f7c9"
@@ -26,108 +26,7 @@
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
     "links": [],
-    "panels": [
-      {
-        "datasource": {
-          "apiVersion": "v0alpha1",
-          "type": "prometheus",
-          "uid": "zxS5e5W4k"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 7,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 1,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.1.0-pre",
-        "targets": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "zxS5e5W4k"
-            },
-            "editorMode": "code",
-            "expr": "${__to:date:M}",
-            "hide": false,
-            "instant": false,
-            "legendFormat": "Grafana",
-            "range": true,
-            "refId": "Grafana ${__to:date:M}"
-          }
-        ],
-        "title": "New panel",
-        "type": "timeseries"
-      }
-    ],
+    "panels": [],
     "preload": false,
     "schemaVersion": 41,
     "tags": [],
@@ -135,11 +34,11 @@
       "list": []
     },
     "time": {
-      "from": "2025-05-15T02:00:00.000Z",
-      "to": "2025-06-15T01:59:59.000Z"
+      "from": "now-6h",
+      "to": "now"
     },
     "timepicker": {},
-    "timezone": "utc",
+    "timezone": "browser",
     "title": "${__to:date:M} investigation"
   }
 }
