@@ -118,9 +118,35 @@
             },
             "editorMode": "code",
             "expr": " month() == bool vector(${__to:date:M})",
-            "legendFormat": "__auto",
+            "legendFormat": "query",
             "range": true,
             "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "zxS5e5W4k"
+            },
+            "editorMode": "code",
+            "expr": " month()",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "Prom",
+            "range": true,
+            "refId": "Prom month()"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "zxS5e5W4k"
+            },
+            "editorMode": "code",
+            "expr": "${__to:date:M}",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "Grafana",
+            "range": true,
+            "refId": "Grafana ${__to:date:M}"
           }
         ],
         "title": "New panel",
