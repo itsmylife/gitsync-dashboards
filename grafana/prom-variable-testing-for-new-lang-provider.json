@@ -116,7 +116,7 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "{\"a.utf8.metric 🤘\"}",
+            "expr": "process_cpu_seconds_total",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
