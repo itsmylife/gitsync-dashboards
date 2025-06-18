@@ -170,6 +170,23 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
+        },
+        {
+          "current": {
+            "text": "go_cpu_classes_gc_mark_assist_cpu_seconds_total",
+            "value": "go_cpu_classes_gc_mark_assist_cpu_seconds_total"
+          },
+          "definition": "metrics(.*cpu.*)",
+          "name": "metrics_variable",
+          "options": [],
+          "query": {
+            "qryType": 2,
+            "query": "metrics(.*cpu.*)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
         }
       ]
     },
