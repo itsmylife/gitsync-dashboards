@@ -136,6 +136,23 @@
           "filters": [],
           "name": "adhoc",
           "type": "adhoc"
+        },
+        {
+          "current": {
+            "text": "instance",
+            "value": "instance"
+          },
+          "definition": "label_names(cpu)",
+          "name": "label_name_variable",
+          "options": [],
+          "query": {
+            "qryType": 0,
+            "query": "label_names(cpu)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
         }
       ]
     },
