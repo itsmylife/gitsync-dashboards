@@ -227,12 +227,12 @@
             "text": "",
             "value": ""
           },
-          "definition": "label_values(a_utf8_http_requests_total, label with space)",
+          "definition": "label_values(a_utf8_http_requests_total, \"label with space\")",
           "name": "classic_query_variable",
           "options": [],
           "query": {
             "qryType": 5,
-            "query": "label_values(a_utf8_http_requests_total, label with space)",
+            "query": "label_values(a_utf8_http_requests_total, \"label with space\")",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,
