@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "2c386486-fbdb-4c6e-967c-aaa28badf686"
@@ -35,14 +35,40 @@
         "fieldConfig": {
           "defaults": {
             "color": {
-              "mode": "thresholds"
+              "mode": "palette-classic"
             },
             "custom": {
-              "align": "auto",
-              "cellOptions": {
-                "type": "auto"
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
               },
-              "inspect": false
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
             },
             "mappings": [],
             "thresholds": {
@@ -69,16 +95,17 @@
         },
         "id": 1,
         "options": {
-          "cellHeight": "sm",
-          "footer": {
-            "countRows": false,
-            "fields": "",
-            "reducer": [
-              "sum"
-            ],
-            "show": false
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
           },
-          "showHeader": true
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
         },
         "pluginVersion": "12.1.0-pre",
         "targets": [
@@ -89,15 +116,14 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "process_cpu_seconds_total{}",
-            "format": "table",
+            "expr": "{\"a.utf8.metric 🤘\"}",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
           }
         ],
         "title": "New panel",
-        "type": "table"
+        "type": "timeseries"
       }
     ],
     "preload": false,
@@ -107,127 +133,9 @@
       "list": [
         {
           "baseFilters": [],
-          "datasource": {
-            "apiVersion": "v0alpha1",
-            "type": "prometheus",
-            "uid": "zxS5e5W4k"
-          },
-          "filters": [
-            {
-              "condition": "",
-              "key": "job",
-              "keyLabel": "job",
-              "operator": "=",
-              "value": "mysql",
-              "valueLabels": [
-                "mysql"
-              ]
-            }
-          ],
+          "filters": [],
           "name": "adhoc",
           "type": "adhoc"
-        },
-        {
-          "current": {
-            "text": "instance",
-            "value": "instance"
-          },
-          "definition": "label_names(cpu)",
-          "name": "label_name_variable",
-          "options": [],
-          "query": {
-            "qryType": 0,
-            "query": "label_names(cpu)",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "legacy",
-            "value": "legacy"
-          },
-          "definition": "label_values({\"a.utf8.metric 🤘\", \"label.with.spaß\"=\"this_is_fun\"},a_legacy_label)",
-          "name": "label_values_variable",
-          "options": [],
-          "query": {
-            "qryType": 1,
-            "query": "label_values({\"a.utf8.metric 🤘\", \"label.with.spaß\"=\"this_is_fun\"},a_legacy_label)",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "go_cpu_classes_gc_mark_assist_cpu_seconds_total",
-            "value": "go_cpu_classes_gc_mark_assist_cpu_seconds_total"
-          },
-          "definition": "metrics(.*cpu.*)",
-          "name": "metrics_variable",
-          "options": [],
-          "query": {
-            "qryType": 2,
-            "query": "metrics(.*cpu.*)",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"} 39238 1750276383000",
-            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"} 39238 1750276383000"
-          },
-          "definition": "query_result({\"a.utf8.metric 🤘\"})",
-          "name": "query_result_variable",
-          "options": [],
-          "query": {
-            "qryType": 3,
-            "query": "query_result({\"a.utf8.metric 🤘\"})",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"}",
-            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"}"
-          },
-          "definition": "{\"a.utf8.metric 🤘\"}",
-          "name": "series_query",
-          "options": [],
-          "query": {
-            "qryType": 4,
-            "query": "{\"a.utf8.metric 🤘\"}",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "",
-            "value": ""
-          },
-          "definition": "label_values(a_utf8_http_requests_total, \"label with space\")",
-          "name": "classic_query_variable",
-          "options": [],
-          "query": {
-            "qryType": 5,
-            "query": "label_values(a_utf8_http_requests_total, \"label with space\")",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
         }
       ]
     },
