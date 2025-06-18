@@ -107,6 +107,11 @@
       "list": [
         {
           "baseFilters": [],
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
           "filters": [
             {
               "condition": "",
