@@ -153,6 +153,23 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
+        },
+        {
+          "current": {
+            "text": "legacy",
+            "value": "legacy"
+          },
+          "definition": "label_values({\"a.utf8.metric 🤘\", \"label.with.spaß\"=\"this_is_fun\"},a_legacy_label)",
+          "name": "label_values_variable",
+          "options": [],
+          "query": {
+            "qryType": 1,
+            "query": "label_values({\"a.utf8.metric 🤘\", \"label.with.spaß\"=\"this_is_fun\"},a_legacy_label)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 1,
+          "regex": "",
+          "type": "query"
         }
       ]
     },
