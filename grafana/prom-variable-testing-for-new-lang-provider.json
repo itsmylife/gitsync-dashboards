@@ -190,8 +190,8 @@
         },
         {
           "current": {
-            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"} 38824 1750274316000",
-            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"} 38824 1750274316000"
+            "text": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"} 39212 1750276248000",
+            "value": "a.utf8.metric 🤘{a_legacy_label=\"legacy\",exported_instance=\"instance\",exported_job=\"job\",instance=\"prometheus-utf8:9112\",job=\"prometheus-utf8\",label with space=\"space\",label with 📈=\"metrics\",label.with.spaß=\"this_is_fun\",room=\"\"Friends Don't Lie\"\",site=\"LA-EPI\"} 39212 1750276248000"
           },
           "definition": "query_result({\"a.utf8.metric 🤘\"})",
           "name": "query_result_variable",
@@ -224,8 +224,8 @@
         },
         {
           "current": {
-            "text": "",
-            "value": ""
+            "text": "space",
+            "value": "space"
           },
           "definition": "label_values(a_utf8_http_requests_total, \"label with space\")",
           "name": "classic_query_variable",
