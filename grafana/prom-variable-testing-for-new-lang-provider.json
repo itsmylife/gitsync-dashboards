@@ -228,7 +228,7 @@
             "value": ""
           },
           "definition": "label_values(a_utf8_http_requests_total, \"label with space\")",
-          "name": "query0",
+          "name": "classic_query_variable",
           "options": [],
           "query": {
             "qryType": 5,
