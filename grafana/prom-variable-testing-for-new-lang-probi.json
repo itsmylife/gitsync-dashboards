@@ -130,7 +130,14 @@
     "schemaVersion": 41,
     "tags": [],
     "templating": {
-      "list": []
+      "list": [
+        {
+          "baseFilters": [],
+          "filters": [],
+          "name": "adhoc",
+          "type": "adhoc"
+        }
+      ]
     },
     "time": {
       "from": "now-6h",
