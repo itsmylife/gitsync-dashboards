@@ -138,7 +138,18 @@
             "type": "prometheus",
             "uid": "zxS5e5W4k"
           },
-          "filters": [],
+          "filters": [
+            {
+              "condition": "",
+              "key": "action",
+              "keyLabel": "action",
+              "operator": "=",
+              "value": "add_client",
+              "valueLabels": [
+                "add_client"
+              ]
+            }
+          ],
           "name": "query0",
           "type": "adhoc"
         }
