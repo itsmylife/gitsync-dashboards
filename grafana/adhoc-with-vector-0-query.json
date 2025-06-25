@@ -116,7 +116,7 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "sum(increase(go_cpu_classes_idle_cpu_seconds_total[$__rate_interval]))",
+            "expr": "sum(increase(go_cpu_classes_idle_cpu_seconds_total[$__rate_interval])) or vector(0)",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
