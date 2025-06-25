@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "28de945c-a673-4f5a-8297-7ac6ca7917d1"
@@ -116,7 +116,7 @@
               "uid": "zxS5e5W4k"
             },
             "editorMode": "code",
-            "expr": "sum(increase(go_cpu_classes_idle_cpu_seconds_total[$__rate_interval])) or vector(0)",
+            "expr": "sum(increase(prometheus_http_requests_total[$__rate_interval])) or vector(0)",
             "legendFormat": "__auto",
             "range": true,
             "refId": "A"
@@ -130,19 +130,7 @@
     "schemaVersion": 41,
     "tags": [],
     "templating": {
-      "list": [
-        {
-          "baseFilters": [],
-          "datasource": {
-            "apiVersion": "v0alpha1",
-            "type": "prometheus",
-            "uid": "zxS5e5W4k"
-          },
-          "filters": [],
-          "name": "query0",
-          "type": "adhoc"
-        }
-      ]
+      "list": []
     },
     "time": {
       "from": "now-6h",
