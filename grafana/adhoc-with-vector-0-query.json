@@ -138,7 +138,18 @@
             "type": "prometheus",
             "uid": "zxS5e5W4k"
           },
-          "filters": [],
+          "filters": [
+            {
+              "condition": "",
+              "key": "instance",
+              "keyLabel": "instance",
+              "operator": "=",
+              "value": "host.docker.internal:3000",
+              "valueLabels": [
+                "host.docker.internal:3000"
+              ]
+            }
+          ],
           "name": "query0",
           "type": "adhoc"
         }
