@@ -1,26 +1,10 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "2c54c2bb-4725-4650-934b-ee38bd1bffcf"
   },
   "spec": {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations \u0026 Alerts",
-          "type": "dashboard"
-        }
-      ]
-    },
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
@@ -33,22 +17,10 @@
               "mode": "palette-classic"
             },
             "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
               "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
               "drawStyle": "line",
               "fillOpacity": 10,
               "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
               "lineInterpolation": "linear",
               "lineWidth": 1,
               "pointSize": 5,
@@ -60,9 +32,6 @@
               "stacking": {
                 "group": "A",
                 "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
               }
             },
             "mappings": [],
@@ -71,7 +40,7 @@
               "steps": [
                 {
                   "color": "green",
-                  "value": 0
+                  "value": null
                 },
                 {
                   "color": "red",
@@ -94,16 +63,9 @@
           "legend": {
             "calcs": [],
             "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
+            "placement": "bottom"
           }
         },
-        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -120,9 +82,8 @@
         "type": "timeseries"
       }
     ],
-    "preload": false,
     "refresh": "5s",
-    "schemaVersion": 41,
+    "schemaVersion": 39,
     "tags": [
       "test",
       "demo"
