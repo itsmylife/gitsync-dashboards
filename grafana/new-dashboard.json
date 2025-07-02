@@ -24,7 +24,6 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": null,
     "links": [],
     "panels": [
       {
@@ -134,6 +133,6 @@
     },
     "timepicker": {},
     "timezone": "browser",
-    "title": "New dashboard"
+    "title": "mcp-testing-dashboard"
   }
 }
