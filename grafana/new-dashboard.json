@@ -125,7 +125,19 @@
     "schemaVersion": 41,
     "tags": [],
     "templating": {
-      "list": []
+      "list": [
+        {
+          "baseFilters": [],
+          "datasource": {
+            "apiVersion": "v0alpha1",
+            "type": "prometheus",
+            "uid": "zxS5e5W4k"
+          },
+          "filters": [],
+          "name": "query0",
+          "type": "adhoc"
+        }
+      ]
     },
     "time": {
       "from": "now-6h",
